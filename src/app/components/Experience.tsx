@@ -21,7 +21,7 @@ const experiences = [
     location: "Sumedang, West Java",
     period: "Jan 2024 — Feb 2024",
     description:
-      "During my internship at the Central Library of Universitas Padjadjaran, I contributed to library operations, metadata management, collection organization, and information literacy initiatives. I played a key role in maintaining operational continuity during system disruptions while supporting the library's commitment to delivering reliable information services to academic users.",
+      "During my internship at the Central Library of Padjadjaran University, I contributed to library operations, metadata management, collection organization, and information literacy initiatives. I played a key role in maintaining operational continuity during system disruptions while supporting the library's commitment to delivering reliable information services to academic users.",
     highlights: [
       "Developed a temporary metadata management workflow using Google Sheets to maintain processing activities for over 50 specialized academic collections during system downtime",
       "Preserved 100% data integrity and ensured seamless migration back to the library management system once services were restored",
@@ -43,6 +43,20 @@ const experiences = [
       "Supported the implementation of the Smart Village program through documentation management, stakeholder coordination, and official correspondence handling",
       "Assisted in organizing academic literacy webinars on scholarly article writing for more than 100 lecturers across LLDIKTI Region III",
       "Coordinated podcast and webinar activities with external partners to ensure smooth event execution and resource fulfillment",
+    ],
+  },
+   {
+    role: "Personal Research Assistant to Senior Lecturer",
+    organization: "Padjadjaran University",
+    location: "Sumedang, West Java",
+    period: "Mar 2026 — Now",
+    description:
+      "Provided direct, high-level research and administrative support to a Senior Lecturer, managing private research data workflows and departmental project logistics.",
+    highlights: [
+      "Served as the primary Data Steward for the lecturer's independent research projects, responsible for collecting, cleaning, and structuring raw datasets",
+      "Maintained advanced spreadsheets and developed data visualizations using R Studio to support the lecturer's academic presentations and analysis",
+      "Conducted comprehensive literature reviews, citation auditing, and manuscript formatting to align draft papers with institutional standards",
+      "Managed the lecturer's academic scheduling, digital correspondence, and research documentation with strict confidentiality and organization",
     ],
   },
 ];
@@ -181,7 +195,7 @@ export function Experience() {
                   {exp.organization}
                 </p>
                 <p
-                  className="text-muted-foreground mb-4"
+                  className="text-muted-foreground mb-4 text-justify"
                   style={{
                     fontSize: "0.9rem",
                     fontFamily: "'DM Sans', sans-serif",

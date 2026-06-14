@@ -39,7 +39,7 @@ export function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in all required fields.");
@@ -47,26 +47,28 @@ export function Contact() {
     }
     setSending(true);
 
-    // Simulate sending — replace this block with your backend call (Supabase, Resend, etc.)
-    await new Promise((r) => setTimeout(r, 1400));
+    const subject = encodeURIComponent(
+      form.subject ? `[Portfolio Contact] ${form.subject}` : "[Portfolio Contact] New Message"
+    );
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nSubject: ${form.subject || "-"}\n\nMessage:\n${form.message}`
+    );
+
+    // Opens the user's email client pre-filled with the form data
+    window.location.href = `mailto:ismi.anjar@gmail.com?subject=${subject}&body=${body}`;
 
     setSending(false);
     setSent(true);
-    toast.success(
-      "Message received!",
-    );
+    toast.success("Opening your email client…");
     setForm({ name: "", email: "", subject: "", message: "" });
-
     setTimeout(() => setSent(false), 5000);
   };
 
   const sendWhatsApp = () => {
     const text = encodeURIComponent(
+      `Halo Ismi Anjar, saya ${form.name || "[nama Anda]"} ingin menghubungi Anda terkait ${form.subject || "peluang kerja sama"}. ${form.message}`
     );
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
-      "_blank",
-    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
   };
 
   return (
@@ -88,7 +90,7 @@ export function Contact() {
               letterSpacing: "0.15em",
             }}
           >
-            04 — CONTACT
+            05 — CONTACT
           </p>
           <h2
             className="text-foreground"

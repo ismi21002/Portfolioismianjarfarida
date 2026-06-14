@@ -6,6 +6,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Experience", href: "#experience" },
+  { label: "Organization", href: "#organization" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -64,19 +65,7 @@ export function Navbar() {
                 {link.label.toUpperCase()}
               </button>
             ))}
-            <a
-              href="/cv-placeholder.pdf"
-              download="Ismi_Anjar_Farida_CV.pdf"
-              className="flex items-center gap-2 px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-              style={{
-                fontSize: "0.8rem",
-                fontWeight: 500,
-                letterSpacing: "0.08em",
-              }}
-            >
-              <Download size={14} />
-              CV
-            </a>
+            
           </div>
 
           {/* Mobile toggle */}

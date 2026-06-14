@@ -76,18 +76,10 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-2">
-            <a
-              href="/cv-placeholder.pdf"
-              download="Ismi Anjar Farida_CV.pdf"
-              className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground hover:opacity-90 transition-opacity duration-200"
-              style={{ fontSize: "0.85rem", fontWeight: 600, letterSpacing: "0.06em" }}
-            >
-              <Download size={16} />
-              DOWNLOAD CV
-            </a>
+            
             <button
               onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="flex items-center gap-2 px-6 py-3 border border-border text-foreground hover:border-primary hover:text-primary transition-all duration-200"
+              className="flex items-center gap-2 px-6 py-3 border border-border text-foreground hover:border-primary hover:text-primary transition-all duration-200 text-[#f5f0f4]"
               style={{ fontSize: "0.85rem", fontWeight: 500, letterSpacing: "0.06em" }}
             >
               CONTACT ME

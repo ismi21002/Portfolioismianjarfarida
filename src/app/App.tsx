@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Gallery } from "./components/Gallery";
 import { Experience } from "./components/Experience";
+import { OrgExperience } from "./components/OrgExperience";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
@@ -30,6 +31,7 @@ export default function App() {
         <About />
         <Gallery />
         <Experience />
+        <OrgExperience />
         <Contact />
       </main>
       <Footer />

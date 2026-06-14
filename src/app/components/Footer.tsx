@@ -74,24 +74,7 @@ export function Footer() {
           </div>
 
           {/* CV download */}
-          <div className="flex flex-col gap-3">
-            <p
-              className="text-muted-foreground mb-1"
-              style={{ fontSize: "0.65rem", fontFamily: "'DM Mono', monospace", letterSpacing: "0.14em" }}
-            >
-              DOCUMENTS
-            </p>
-            <a
-              href="/cv-placeholder.pdf"
-              download="Ismi_Anjar_Farida_CV.pdf"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors duration-200"
-              style={{ fontSize: "0.875rem", fontFamily: "'DM Sans', sans-serif" }}
-            >
-              <Download size={14} className="text-primary" />
-              Download CV (PDF)
-            </a>
-            
-          </div>
+          
         </div>
 
         {/* Bottom bar */}
